@@ -1,2 +1,2 @@
 # Godot-Scripts
-Scripts and functions for the godot game engine
+Helpful scripts and functions that i use for the godot game engine
