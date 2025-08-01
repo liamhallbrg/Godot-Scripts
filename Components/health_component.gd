@@ -12,6 +12,7 @@ signal HealthMaxed
 func damage(amount :int = 0) -> void:
 	if !alive:  print(owner.name + " is already dead!")
 	health -= amount
+	print(health)
 	_control_health()
 
 

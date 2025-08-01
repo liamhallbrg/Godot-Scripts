@@ -1,6 +1,6 @@
 extends Node
 
-class_name VelocityComponent2D
+class_name VelocityComponent
 
 @export var acceleration : float = 1.0
 @export var max_speed : float = 50.0
