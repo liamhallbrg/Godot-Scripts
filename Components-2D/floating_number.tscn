@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0xqd4b3kjqgf"]
+
+[ext_resource type="LabelSettings" uid="uid://dikrt65wuiua2" path="res://settings/floating_number_label_setting.tres" id="1_fjeob"]
+[ext_resource type="Script" uid="uid://iqryraobdh5l" path="res://scripts/floating_number.gd" id="2_2ym5y"]
+
+[node name="FloatingNumber" type="Node2D"]
+script = ExtResource("2_2ym5y")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -6.0
+offset_top = -5.0
+offset_right = 79.0
+offset_bottom = 60.0
+scale = Vector2(0.15, 0.15)
+text = "250"
+label_settings = ExtResource("1_fjeob")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 0

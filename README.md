@@ -5,25 +5,31 @@ This repository contains a set of reusable scripts and shaders for Godot Engine 
 
 ## Contents
 
+
 ### Components-2D
-Reusable 2D components for common gameplay mechanics:
-- **floating_numbers_component.gd**: Displays floating numbers (e.g., damage, healing) above entities.
-- **health_component.gd**: Manages health, damage, and healing logic for entities.
-- **hitbox_component.gd**: Handles hit detection and collision for attacks.
-- **hurtbox_component.gd**: Defines areas that can receive damage or effects.
-- **inventory_component.gd**: Basic inventory system for holding items.
-- **item_holder_component.gd**: Manages item pickup, holding, and dropping.
-- **knockback_component.gd**: Applies knockback effects to entities upon impact.
-- **velocity_component.gd**: Controls entity movement and velocity.
+Reusable 2D components and scenes for common gameplay mechanics:
+- **camera_shake.gd**: Adds camera shake effects using noise for dynamic feedback.
+- **floating_number.tscn**: Scene for displaying floating numbers (e.g., damage, healing) above entities.
+- **floating_numbers_component.gd**: Spawns and manages floating numbers for visual feedback.
+- **health_component.gd**: Manages health, damage, healing, and death logic for entities.
+- **hitbox_component.gd**: Handles hit detection and collision for attacks, emits damage to hurtboxes.
+- **hurtbox_component.gd**: Receives damage, connects to health, and emits hit signals.
+- **inventory_component.gd**: Basic inventory system for holding, adding, and removing items.
+- **item_holder_component.gd**: Manages item pickup, holding, switching, and dropping.
+- **knockback_component.gd**: Applies knockback effects to entities using velocity.
+- **velocity_component.gd**: Controls entity movement, acceleration, and velocity logic.
+
 
 ### Managers-2D
-- **audio_manager.gd**: Centralized audio management for playing sound effects and music.
+- **audio_manager.gd**: Centralized audio management for music, sound effects, and audio settings.
+
 
 ### Shaders-2D
 - **hit_flash_shader.gdshader**: Shader for creating a hit flash effect on 2D sprites (e.g., when taking damage).
 
+
 ### Shaders-3D
-- **pixel_art_shader_3d.gdshader**: Pixel art style shader for 3D, useful for stylized games.
+- **pixel_art_shader_3d.gdshader**: Pixel art style shader for 3D models, useful for stylized games.
 
 ## Usage
 1. **Copy** the desired scripts or shaders into your Godot project.
