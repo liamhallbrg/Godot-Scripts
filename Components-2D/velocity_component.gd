@@ -9,7 +9,6 @@ var velocity : Vector2 = Vector2.ZERO
 
 
 func move_character(character_body : CharacterBody2D) -> void:
-	velocity = velocity.limit_length(max_speed)
 	character_body.velocity = velocity
 	character_body.move_and_slide()
 	
@@ -20,7 +19,6 @@ func move_character(character_body : CharacterBody2D) -> void:
 
 
 func move_body(rigidbody : RigidBody2D) -> void:
-	velocity = velocity.limit_length(max_speed)
 	rigidbody.linear_velocity = velocity
 	
 	if (rigidbody.linear_velocity.x == 0):
@@ -57,6 +55,8 @@ func accel_velocity(new_velocity : Vector2, accel_multiplier : float = 1.0) -> V
 func set_velocity(new_velocity : Vector2) -> void:
 	velocity = new_velocity
 
-## Instantly adds the velocity, instead of over time.
 func add_velocity(added_velocity : Vector2) -> Vector2:
 	return accel_velocity(velocity + added_velocity)
+
+func multiply_velocity(multiplier : float) -> Vector2:
+	return accel_velocity(velocity * multiplier)

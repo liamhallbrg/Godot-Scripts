@@ -2,6 +2,7 @@ extends Area2D
 class_name HurtboxComponent
 
 @export var health_component : HealthComponent
+@export var spawn_floating_number : bool = true
 
 signal Hit
 
@@ -15,8 +16,6 @@ func _ready() -> void:
 		printerr("Missing HealthComponent on " + str(get_path()) + "'s HurtboxComponent")
 
 
-func hurtbox_entered(amount: int) -> void:
-	if !health_component: return
-	
-	Hit.emit(amount)
-	health_component.damage(amount)
+func hit(hit_info:HitInfo) -> void:
+	Hit.emit(hit_info)
+	health_component.damage(hit_info.damage_amount)
